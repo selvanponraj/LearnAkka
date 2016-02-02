@@ -75,7 +75,7 @@ object Sample extends App {
     implicit val timeout = Timeout(25 seconds)
     val future: Future[Any] = actor ? StartProcessFileMsg()
     val result = Await.result(future,timeout.duration)
-    println("Toal no of word : " + result)
+    println("Toal no of words : " + result)
     system.shutdown
   }
 }
